@@ -1,0 +1,4 @@
+---
+- import_tasks: ./roles/ansible-network-dev/tasks/create_dirs.yml
+- import_tasks: ./roles/ansible-network-dev/tasks/clone_basic_repos.yml
+- import_tasks: ./roles/ansible-network-dev/tasks/clone_cisco_repos.yml

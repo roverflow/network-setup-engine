@@ -1,0 +1,12 @@
+---
+- name: Clone netcommon repository
+  ansible.builtin.git:
+    repo: "{{ netcommon_git }}"
+    dest: "{{ default_path }}/collections/ansible_collections/ansible/netcommon"
+    update: yes
+
+- name: Clone utils repository
+  ansible.builtin.git:
+    repo: "{{ utils_git }}"
+    dest: "{{ default_path }}/collections/ansible_collections/ansible/utils"
+    update: yes

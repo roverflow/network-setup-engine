@@ -1,0 +1,16 @@
+---
+- name: Ensure default path exists
+  ansible.builtin.file:
+    path: "{{ default_path }}"
+    state: directory
+    mode: "0755"
+
+- name: Create development subdirectories
+  ansible.builtin.file:
+    path: "{{ default_path }}/{{ item }}"
+    state: directory
+    mode: "0755"
+  loop:
+    - collections
+    - collections/ansible_collections
+    - collections/ansible_collections/ansible

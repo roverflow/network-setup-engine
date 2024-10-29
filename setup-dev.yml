@@ -1,0 +1,15 @@
+# setup-dev.yml
+---
+- name: Setup local development environment
+  hosts: local
+  gather_facts: true # Gathers OS information to handle cross-distro tasks
+
+  roles:
+    - role: ansible-network-dev
+      vars:
+        default_path: "~/workspace/redhat/thebox"
+        netcommon_git: git@github.com:roverflow/netcommon.git
+        utils_git: git@github.com:roverflow/ansible.utils.git
+        nxos_git: git@github.com:roverflow/cisco.nxos.git
+        ios_git: git@github.com:roverflow/ios.git
+        iosxr_git: git@github.com:roverflow/iosxr.git

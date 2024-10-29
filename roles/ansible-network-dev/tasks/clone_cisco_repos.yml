@@ -1,0 +1,24 @@
+---
+- name: Create cisco subdirectory
+  ansible.builtin.file:
+    path: "{{ default_path }}/collections/ansible_collections/cisco"
+    state: directory
+    mode: "0755"
+
+- name: Clone nxos repository
+  ansible.builtin.git:
+    repo: "{{ nxos_git }}"
+    dest: "{{ default_path }}/collections/ansible_collections/cisco/nxos"
+    update: yes
+
+- name: Clone ios repository
+  ansible.builtin.git:
+    repo: "{{ ios_git }}"
+    dest: "{{ default_path }}/collections/ansible_collections/cisco/ios"
+    update: yes
+
+- name: Clone iosxr repository
+  ansible.builtin.git:
+    repo: "{{ iosxr_git }}"
+    dest: "{{ default_path }}/collections/ansible_collections/cisco/iosxr"
+    update: yes
