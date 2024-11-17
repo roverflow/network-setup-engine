@@ -11,5 +11,5 @@
         netcommon_git: git@github.com:roverflow/netcommon.git
         utils_git: git@github.com:roverflow/ansible.utils.git
         nxos_git: git@github.com:roverflow/cisco.nxos.git
-        ios_git: git@github.com:roverflow/ios.git
+        ios_git: git@github.com:roverflow/cisco.ios.git
         iosxr_git: git@github.com:roverflow/iosxr.git
