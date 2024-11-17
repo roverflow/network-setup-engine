@@ -1,17 +1,13 @@
 ---
 - name: Install the latest version of zsh
+  become: true
   ansible.builtin.dnf:
     name: zsh
     state: latest
   when: ansible_distribution == "Fedora"
 
-- name: Install the 'Development tools' package group
-  ansible.builtin.dnf:
-    name: "@Development tools"
-    state: present
-  when: ansible_distribution == "Fedora"
-
 - name: Install the latest version of terminator
+  become: true
   ansible.builtin.dnf:
     name: terminator
     state: latest
