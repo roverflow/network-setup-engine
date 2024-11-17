@@ -7,9 +7,10 @@
   roles:
     - role: ansible-network-dev
       vars:
-        default_path: "~/workspace/redhat/thebox"
+        default_path: "~/workspace"
         netcommon_git: git@github.com:roverflow/netcommon.git
         utils_git: git@github.com:roverflow/ansible.utils.git
         nxos_git: git@github.com:roverflow/cisco.nxos.git
         ios_git: git@github.com:roverflow/cisco.ios.git
         iosxr_git: git@github.com:roverflow/iosxr.git
+    - role: app-install-role
