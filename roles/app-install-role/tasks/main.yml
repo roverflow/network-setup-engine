@@ -1,0 +1,29 @@
+---
+- name: Install the latest version of zsh
+  ansible.builtin.dnf:
+    name: zsh
+    state: latest
+  when: ansible_distribution == "Fedora"
+
+- name: Install the 'Development tools' package group
+  ansible.builtin.dnf:
+    name: "@Development tools"
+    state: present
+  when: ansible_distribution == "Fedora"
+
+- name: Install the latest version of terminator
+  ansible.builtin.dnf:
+    name: terminator
+    state: latest
+  when: ansible_distribution == "Fedora"
+
+- name: Ensure terminator config directory exists
+  ansible.builtin.file:
+    path: ~/.config/terminator
+    state: directory
+    mode: "0755"
+
+- name: Write terminator configuration
+  ansible.builtin.copy:
+    dest: ~/.config/terminator/config
+    content: "{{ terminator_config_content }}"

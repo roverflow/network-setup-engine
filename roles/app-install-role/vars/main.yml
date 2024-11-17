@@ -1,0 +1,23 @@
+---
+install_terminator_config: true
+install_zsh_config: true
+terminator_config_content: |
+  [global_config]
+    enabled_plugins = LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
+  [keybindings]
+  [profiles]
+    [[default]]
+      background_color = "#070707"
+      font = Source Code Pro 12
+      show_titlebar = False
+      scrollback_lines = 5120
+      scrollback_infinite = True
+      use_system_font = False
+      copy_on_selection = True
+  [layouts]
+    [[default]]
+      [[[window0]]]
+        type = Window
+        parent = ""
+        size = 1100, 700
+  [plugins]
