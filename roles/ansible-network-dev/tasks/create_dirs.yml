@@ -1,7 +1,13 @@
 ---
 - name: Ensure default path exists
   ansible.builtin.file:
-    path: "{{ default_path }}"
+    path: "{{ default_path }}/thebox"
+    state: directory
+    mode: "0755"
+
+- name: Create Virtual Envs Dirtectory
+  ansible.builtin.file:
+    path: "{{ default_path }}/virtualenvs"
     state: directory
     mode: "0755"
 

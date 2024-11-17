@@ -1,6 +1,6 @@
 ---
 # vars file for ansible-network-dev
-default_path: ~/ansible-network-dev/thebox
+default_path: ~/ansible-network-dev
 netcommon_git: https://github.com/ansible-collections/ansible.netcommon.git
 utils_git: https://github.com/ansible-collections/ansible.utils.git
 nxos_git: https://github.com/ansible-collections/cisco.nxos.git
